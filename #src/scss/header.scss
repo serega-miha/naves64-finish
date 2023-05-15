@@ -1,0 +1,271 @@
+.header{
+	position: relative;
+
+}
+ 
+ // //icon-menu=============================================================
+ .icon-menu{
+	display: none;
+
+	position: fixed;
+	top: 13px;
+	right: 15px;
+	width: 30px;
+	height: 18px;
+	cursor: pointer;
+	z-index: 25;
+
+	@media(max-width: $md3+px) {
+		display: block;
+	}
+
+	span {
+		@include anim(0.3s, 0s);
+		top: 8px;
+		left: 0px;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #000;
+
+		&:first-child {
+			top: 0px;
+		}
+
+		&:last-child {
+			top: auto;
+			bottom: 0px;
+		}
+	}
+
+	&._active {
+		span {
+			@include scale(0);
+
+			&:first-child {
+				@include rotate(-45deg);
+				top: 8px;
+			}
+
+			&:last-child {
+				@include rotate(45deg);
+				bottom: 8px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+//====================================================================================================
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+
+
+
+	
+	height:70px;
+	@media (max-width: $md2+px){
+		height:55px;
+	}
+	@media (max-width: $md3+px){
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 25;
+		background-color: $white;
+	
+		
+		height:50px;
+	}
+}
+
+.header-logo {
+
+	// flex: 1 1 auto;
+	h2{
+		display: inline-block;
+		color: #fff;
+		font-weight: 900;
+		background-color: #3a3a59;
+		padding: 0 0 0 5px;
+		letter-spacing: 6px;
+		border: 4px solid #3a3a59;
+		border-radius: 5px;
+		font-size: calc(12px + 15 * ((100vw - 320px)/ 1120));
+
+
+
+	}
+}
+.header-title {
+	// flex: 1 1 auto;
+	text-align: center;
+	@media (max-width: $md3+px){
+		display: none;
+	}
+	
+
+}
+.header-title__city {
+}
+.header-title__time-work {
+}
+.header-contact {
+	// flex: 1 1 auto;
+	display: flex;
+	justify-content: end;
+	@media (max-width: $md3+px){
+		justify-content: start;
+	}
+
+}
+.header-contact__icon {
+	margin: 0px 10px 0px 0px;
+	img{
+	height: 40px;
+	width: 40px;
+	@media (max-width: $md2+px){
+		height: 35px;
+	width: 35px;
+	}
+	@media (max-width: $md3+px){
+		height: 27px;
+		width: 27px;
+	}
+	
+	}
+	
+	
+}
+.header-contact__body {
+	@media (max-width: $md3+px){
+		padding: 0px 50px 0px 0px;
+	}
+}
+.header-contact__body-city {
+}
+.header-contact__body-phone {
+	a{
+		font-size: 1.8rem;
+		font-weight: 800;
+		color: $purple;
+		&:hover{
+			color: $orange;
+			text-decoration: underline;
+		}
+	}
+}
+//====================================================================================================
+
+
+
+.header__menu {
+@media (min-width: $md3+px){
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 26;
+}
+	background-color:$grey;	
+	// position: fixed;
+	// z-index: 30;
+	// width: 100%;
+	// top: 0;
+	// left: 0;
+	// height: 47px;
+
+@media (max-width: $md3+px){
+	background-color: $white;
+}
+	
+
+}
+.menu__body{
+	padding: 10px 0px;
+	@media (max-width: $md3+px) {
+		position: fixed;
+		//Добавили оверфлоу чтобы можно было скролить меню если узкий по высоте экран!!!!=======================
+		overflow: auto;
+		top: -110%;
+		left: 0;
+		z-index: 19;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		min-height: 100%;
+		opacity: 0.95;
+		background-color: $grey;
+		transition: all 0.8s ease 0s;
+
+	}
+	&._active{
+		top: 50px;
+		transition: all 0.8s ease 0s;
+	}
+}
+.menu__list {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: $md3+px){
+		flex-direction: column;
+		margin: 15px 0px 15px 0px;
+		
+		height: 20%;
+	
+	}
+
+}
+.menu__link {
+	color: $white;
+	font-size: 1.5rem;
+	font-weight: 600;
+	@media (max-width: $md3+px){
+		font-size: 3rem;
+	}
+	&:hover{
+		color: $orange;
+		text-decoration: underline;
+	}
+	&._active{
+		color: $orange;
+		text-decoration: underline;
+	}
+}
+
+
+.header__menu-max3 {
+	display: none;
+
+	@media (max-width: $md3+px) {
+		display:inline-block;
+		margin: 0px 0px 50px 0px;
+		
+	
+
+		a {
+			display: flex;
+			justify-content: center;
+			margin: 0px 0px 20px 0px;
+			letter-spacing: 1px;
+			
+			font-weight: 700;
+			
+			
+		
+
+			&:active{
+				color:#ed810e;
+				box-shadow: 2px 2px 3px rgb(241, 120, 6);
+				transition: all 0.5s ease 0s;
+			}
+			
+		}
+		}
+	}

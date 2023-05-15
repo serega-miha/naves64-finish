@@ -1,0 +1,226 @@
+@use "sass:math";
+.footer{
+    background-color: #3a3a59;
+}
+.footer__container {
+
+    
+}
+
+.footer__body {
+    display: flex;
+    padding: 15px 5px;
+    margin-bottom: -30px;
+    @media (max-width: $md3+px){
+        flex-direction: column;
+        
+        align-items: center;
+
+    }
+}
+.body-footer__info {
+    flex: 1 1 44%;
+   
+    @media (max-width: $md3+px){
+        flex: 1 1 auto;
+    }
+}
+.info-footer {
+    color: white;
+    text-align: left;
+    margin: 0px 0px 15px 0px;
+    
+}
+.info-footer__title {
+    font-weight: 500;
+    margin: 0px 0px 10px 0px;
+    @media (max-width: $md3+px){
+        display: none;
+    }
+    
+}
+.info-footer__text {
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0px 0px 10px 0px;
+    max-width:35em;
+    @media (max-width: $md2+px){
+        max-width:25em;
+    }
+    @media (max-width: $md3+px){
+        display: none;
+        
+    }
+    
+}
+.info-footer__end {
+    font-weight: 400;
+    @media (max-width: $md3+px){
+        display: none;
+    }
+}
+.body-footer__menu {
+    flex: 1 1 28%;
+    @media (max-width: $md3+px){
+        display: none;
+    }
+}
+.menu-footer {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    
+
+}
+.menu-footer__columns {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+   a{
+    margin: 0px 0px 5px 0px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    &:hover{
+        text-decoration: underline;
+        color: yellow;
+    }
+    
+   }
+    
+}
+.body-footer__title {
+    flex: 1 1 28%;
+    color: white;
+    font-size: 22px;
+    @media (max-width: $md3+px){
+        flex: 1 1 auto;
+        margin: 0px 0px 25px 0px;
+        text-align: center;
+    }
+}
+.footer__phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.footer_phone {
+  
+
+    
+    
+}
+.phone-footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0px 0px 20px 0px;
+    @media (max-width: $md3+px){
+        justify-content: center;
+       }
+}
+.phone-footer__logo {
+    
+   img{
+    max-width: 45px;
+    max-height: 45px;
+    @media (max-width: $md2+px){
+      max-width: 37px;
+    max-height: 37px;
+   
+    }
+  }
+}
+.phone-footer__text {
+    margin-left: 10px;
+}
+.footer-item__title {
+    
+    font-size: 13px;
+    color: white;
+    @media (max-width: $md2+px){
+        font-size: 11px;
+    }
+}
+.footer-item__number {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    @media (max-width: $md2+px){
+        font-size: 22px;
+    }
+    &:hover{
+        text-decoration: underline;
+        color: yellow;
+    }
+}
+.footer_phone-button {
+   display: flex;
+   justify-content: end;
+   padding: 0px 0px 20px 0px;
+   @media (max-width: $md3+px){
+    justify-content: center;
+   }
+   @media (max-width: 460px){
+    flex-direction: column;
+    align-items: center;
+    
+   }
+   
+}
+.footer_phone-button__zamer{
+    @media (max-width: 460px){
+    margin-bottom: 30px;
+    
+    }
+
+}
+.footer-button-order {
+  
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 30px;
+    border: 1px solid black;
+   border-radius: 8px;
+    color: black;
+    background-color: #ed810e;
+    box-shadow:1px 1px 5px rgba(248, 248, 248);
+   
+    @media (max-width: $md2+px){
+        font-size: 16px;
+    }
+   
+       
+  
+
+    &:hover{
+        background-color: #ed810e;
+        box-shadow:
+    0 1px rgba(255,255,255,.2) inset,
+    0 3px 0px rgba(0,1,6,.5),
+    0 0 1px 1px rgba(0,1,6,.2);
+    }
+}
+.footer-button-calc {
+  
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 30px;
+    border: 1px solid black;
+   border-radius: 8px;
+    color: black;
+    background-color: #ed810e;
+    box-shadow:1px 1px 5px rgba(248, 248, 248);
+    @media (max-width: $md2+px){
+        font-size: 16px;
+    }
+   
+    &:hover{
+        background-color: #ed810e;
+        box-shadow:
+    0 1px rgba(255,255,255,.2) inset,
+    0 3px 0px rgba(0,1,6,.5),
+    0 0 1px 1px rgba(0,1,6,.2);
+    }
+}
